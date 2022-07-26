@@ -14,10 +14,10 @@ const CampsitesList = () => {
                         className='m-4'
                         key={campsite.id}
                     >
-                <CampsiteCard campsite={campsite} />
+                        <CampsiteCard campsite={campsite} />
                     </Col>
-    );
-})}
+                );
+            })}
         </Row >
     );
 };

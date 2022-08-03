@@ -80,10 +80,10 @@ const CommentForm = ({ campsiteId }) => {
                                     rows='12'
                                     className='form-control'
                                 />
-                                <Button type='submit' color='primary' className='my-2'>
-                                    Submit
-                                </Button>
                             </FormGroup>
+                            <Button type='submit' color='primary'>
+                                Submit
+                            </Button>
                         </Form>
                     </Formik>
                 </ModalBody>

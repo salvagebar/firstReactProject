@@ -9,13 +9,16 @@ import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import AboutPage from './pages/AboutPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { fetchPartners } from './features/partners/partnersSlice';
 import './App.css';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCampsites());
+    dispatch(fetchPartners());
   }, [dispatch]);
+  
   return (
     <div className="App">
       <Header />

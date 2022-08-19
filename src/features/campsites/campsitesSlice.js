@@ -36,7 +36,7 @@ const campsitesSlice = createSlice({
         },
         [fetchCampsites.rejected]: (state, action) => {
             state.isLoading = false;
-            state.errMsg = action.errMsg ? action.error.message : 'Fetch failed';
+            state.errMsg = action.error ? action.error.message : 'Fetch failed';
         }
     }
 });

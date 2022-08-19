@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { act } from 'react-dom/test-utils';
+// import { act } from 'react-dom/test-utils';
 // import { COMMENTS } from '../../app/shared/COMMENTS';
 import { baseUrl } from '../../app/shared/baseUrl';
 
@@ -63,7 +63,7 @@ const commentsSlice = createSlice({
         },
         [fetchComments.rejected]: (state, action) => {
             state.isLoading = false;
-            state.errMsg = action.errMsg ? action.error.message : 'Fetch failed';
+            state.errMsg = action.error ? action.error.message : 'Fetch failed';
         },
         [postComment.rejected]: (state, action) => {
             alert(

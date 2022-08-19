@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { Col, Row } from 'reactstrap';
+import { Col } from 'reactstrap';
 import Comment from './Comment';
 import { selectCommentsByCampsiteId } from './commentsSlice';
 import CommentForm from './CommentForm';
@@ -13,17 +13,17 @@ const CommentsList = ({ campsiteId }) => {
 
     if (isLoading) {
         return (
-            <Row>
+            <Col>
                 <Loading />
-            </Row>
+            </Col>
         );
     }
 
     if (errMsg) {
         return (
-            <Row>
+            <Col>
                 <Error errMsg={errMsg} />
-            </Row>
+            </Col>
         );
     }
 
